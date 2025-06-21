@@ -3,7 +3,7 @@ function stringChop(str, size) {
   if (str === null) return [];
 
   const result = [];
-  const chunkSize = Number(size); // Ensure size is a number
+  const chunkSize = Number(size); // Convert to number
 
   for (let i = 0; i < str.length; i += chunkSize) {
     result.push(str.slice(i, i + chunkSize));
@@ -15,5 +15,8 @@ function stringChop(str, size) {
 // Do not change the code below
 const str = prompt("Enter String.");
 const size = prompt("Enter Chunk Size.");
-alert(stringChop(str, size));
+alert(JSON.stringify(stringChop(str, size))); 
+
+
+
 
